@@ -1,0 +1,36 @@
+
+.form-group.required .control-label:after {
+    content:" *";
+    color:orangered;
+    font-family: "Comic Sans MS";
+
+}
+
+html, body {
+    height: 100%;
+    background: #454d55;
+}
+.container, .row.justify-content-center.align-items-center {
+    height: 100%;
+    min-height: 100%;
+}
+td{
+    text-align: center;
+}
+
+.usersForm{
+    background: #454d55;
+}
+.card-body {
+    border-color: gray;
+    background: #454d55;
+}
+.form-group {
+    color: #ffffff;
+}
+.card-title{
+    color: #ffffff;
+}
+.table{
+    color: #ffffff;
+}

@@ -1,13 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Temy Test Environment</title>
-</head>
-<body>
-    <h1>It works!</h1>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/file.css">
+    </head>
+    <body>
+        <form class="usersForm">
+            <div class="container mx-auto my-2 my-sm-3 my-lg-4 p-3">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-6 justify-content-center">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Registration form</h5>
+                                <div class="form-group required">
+                                    <label for="inputName" class="control-label">Name</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name" required>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="inputEmail" class="control-label">Email</label>
+                                    <div>
+                                        <input type="email" pattern="[a-z0-9]+@[a-z0-9]+\.[a-z]{2,4}$" class="form-control"
+                                               id="inputEmail" placeholder="Enter your email" required/>
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="inputCountry" class="control-label">Country</label>
+                                    <select id="inputCountry" class="form-control" non-selected required>
+                                        <option selected></option>
+                                    </select>
+                                </div>
+                                <div class="form-group required" id="stateChoose" hidden="true">
+                                    <label for="inputState" class="control-label">State</label>
+                                    <select id="inputState" class="form-control" non-selected required>
+                                        <option selected></option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group required" id="cityChoose" hidden="true">
+                                    <label for="inputCity" class="control-label">City</label>
+                                    <select id="inputCity" class="form-control" non-selected required>
+                                        <option selected></option>
+                                    </select>
+                                </div>
+                                <div class="form-group required">
+                                    <label for="inputPhone_number" class="control-label">Phone number</label>
+                                    <div>
+                                        <input type="tel" class="form-control" id="inputPhone_number" minlength="4"
+                                                maxlength="15" placeholder=" Enter phone number" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">About me</label>
+                                   <textarea name="comment" class="form-control" id="comment" maxlength="500" style="font-size:18px"
+                                                  placeholder="500 characters available"></textarea>
+                                    <div id="charactersRemaining"></div>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-outline btn-lg float-right mr-2 mb-2 mt-2"
+                                        id="submitButton">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table class="table mx-auto my-2 my-sm-4 my-lg-5 p-3 w-75 mr-auto ml-auto" id="usersTable"></table>
+        </form>
+        <script src="js/file.js"></script>
+    </body>
 </html>
